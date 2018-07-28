@@ -8,13 +8,15 @@ YTSearch({ key: API_KEY, term: 'surfboards' }, function(data) {
   console.log(data);
 });
 // Create a new compononent. This component should produce some HTML
-const App = () => {
-  return (
-    <div>
-      <SearchBar />
-    </div>
-  );
-};
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <SearchBar />
+      </div>
+    );
+  }
+}
 // Take this html and put it on the page (in the DOM)
 //  first argument takes a component, second takes a selected div
 ReactDOM.render(<App />, document.querySelector('.container'));
